@@ -1,0 +1,876 @@
+/*=================== */
+/* ==== Linktree ==== */
+/* ================== */
+
+
+/* Estilos generales del cuerpo de la página */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #cdcdcd; 
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Contenedor principal */
+.linktree-container {
+    background-color: rgba(40, 40, 40, 0.85);
+    border-radius: 20px;
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Imagen de perfil circular */
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #f0f0f0;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Nombre */
+h1 {
+    font-size: 30px;
+    margin: 0;
+}
+
+/* Bienvenida */
+.welcome-text {
+    font-size: 20;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+/* Descripción */
+.description {
+    font-size: 15px;
+    color: #c0c0c0;
+    margin-bottom: 30px;
+}
+
+/* Contenedor boton */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Estilo boton */
+.link-button {
+    background-color: #3b82f6;
+    color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Efecto boton */
+.link-button:hover {
+    background-color: #2563eb;
+    transform: scale(1.03);
+}
+
+/*Icono redes sociales */
+.redessociales {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+.redessociales:hover {
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================== */
+/* ====== Blog ====== */
+/* ================== */
+
+
+/* Variables de color para Boca Juniors */
+:root {
+    --boca-blue: #0033A0; 
+    --boca-yellow: #FFC300; 
+    --boca-dark-blue: #001f60; 
+    --text-light: #f0f0f0;
+    --text-dark: #333;
+    --bg-light-gray: #e0e0e0;
+    --bg-dark-gray: #2c2c2c;
+}
+
+/* General para el blog */
+body.blog-page {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--boca-yellow);
+    color: var(--text-dark);
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Barra de navegación */
+.blog-page nav {
+    background-color: var(--boca-blue);
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.blog-page nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.blog-page nav a {
+    color: var(--text-light);
+    padding: 8px 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+.blog-page nav a:hover {
+    background-color: var(--boca-dark-blue);
+    color: var(--boca-yellow);
+}
+
+.blog-page nav img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--boca-yellow);
+}
+
+/* Estilos para los elementos del nav */
+.blog-page .nav-logo,
+.blog-page .nav-title,
+.blog-page .nav-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* titulo */
+.blog-page li.nav-title h2 {
+    color: var(--boca-yellow);
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+/* Contenedor para los enlaces */
+.blog-page li.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+/* Contenedor principal del blog */
+.blog-page main {
+    display: flex;
+    max-width: 1200px;
+    margin: 30px auto;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* Sección de posts (feed) */
+.blog-page .feed {
+    flex: 3;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blog-page .feed article {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--bg-light-gray);
+}
+
+.blog-page .feed article:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.blog-page .feed article ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.blog-page .feed article ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.blog-page .feed article ul li a {
+    background-color: var(--boca-yellow);
+    color: var(--boca-blue);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.85em;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.blog-page .feed article ul li a:hover {
+    background-color: #e6b300;
+}
+
+.blog-page .feed article h1 {
+    font-size: 2.2em;
+    color: var(--boca-blue);
+    margin: 15px 0 10px;
+    line-height: 1.2;
+}
+
+.blog-page .feed article p {
+    font-size: 1.05em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.blog-page .feed article p a {
+    color: var(--boca-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.blog-page .feed article p a:hover {
+    text-decoration: underline;
+}
+
+.blog-page .feed article img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-page .feed article > a { 
+    display: inline-block;
+    background-color: var(--boca-blue);
+    color: var(--text-light);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.blog-page .feed article > a:hover {
+    background-color: var(--boca-dark-blue);
+}
+
+.blog-page hr {
+    border: none;
+    border-top: 1px dashed var(--bg-light-gray);
+    margin: 30px 0;
+}
+
+/* Barra lateral (aside) */
+.blog-page aside {
+    flex: 1; 
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    align-self: flex-start; 
+}
+
+.blog-page aside section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--bg-light-gray);
+}
+
+.blog-page aside section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.blog-page aside h3 {
+    font-size: 1.5em;
+    color: var(--boca-blue);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.blog-page aside .perfil img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 15px;
+    display: block;
+    border: 3px solid var(--boca-yellow);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.blog-page aside .perfil p {
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #666;
+    text-align: center;
+}
+
+.blog-page aside .redes ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.blog-page aside .redes ul li {
+    margin-bottom: 10px;
+}
+
+.blog-page aside .redes ul li a {
+    color: var(--boca-blue);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.blog-page aside .redes ul li a:hover {
+    color: var(--boca-yellow);
+}
+
+
+/* Footer */
+.blog-page footer {
+    background-color: var(--boca-dark-blue);
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9em;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+    .blog-page main {
+        flex-direction: column;
+    }
+
+    .blog-page .feed,
+    .blog-page aside {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .blog-page aside {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .blog-page nav ul {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+    gap: 15px; 
+    align-items: center;
+    }
+
+    .blog-page nav img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .blog-page nav a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .blog-page .feed {
+        padding: 20px;
+    }
+
+    .blog-page .feed article h1 {
+        font-size: 1.8em;
+    }
+
+    .blog-page .feed article img {
+        height: 200px;
+    }
+
+    .blog-page aside {
+        padding: 20px;
+    }
+
+    .blog-page nav li {
+        width: auto; 
+        margin: 0 5px;
+    }
+    .blog-page nav a {
+        padding: 8px 12px;
+        width: auto;
+    }
+    .blog-page nav img {
+        display: block; 
+        margin-bottom: 10px;
+    }
+    
+    /* Apila los enlaces en la vista móvil */
+    .blog-page li.nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    }
+
+    /* Hace que los enlaces de nav ocupen el 100% */
+    .blog-page li.nav-links a {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box; 
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+/* ======================================= */
+/* ==== Estilos Páginas de Artículo ==== */
+/* ======================================= */
+
+.blog-page .article-container {
+    max-width: 900px; /* Un poco más ancho que el feed */
+    margin: 30px auto;
+    padding: 30px 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Meta info (autor, fecha) */
+.blog-page .article-meta {
+    font-size: 1.05em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+.blog-page .article-meta a {
+    color: var(--boca-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+.blog-page .article-meta a:hover {
+    text-decoration: underline;
+}
+
+/* Imagen principal del artículo */
+.blog-page .article-container img {
+    width: 100%;
+    height: 400px; /* Más alta para la página de artículo */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cuerpo del artículo */
+.blog-page .article-body p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.blog-page .article-body blockquote {
+    border-left: 5px solid var(--boca-yellow);
+    margin: 25px 0 25px 20px;
+    padding: 15px 20px;
+    font-size: 1.2em;
+    font-style: italic;
+    color: #555;
+    background-color: #f9f9f9;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Botón de "Volver" */
+.blog-page a.back-button {
+    display: inline-block;
+    background-color: var(--boca-dark-blue);
+    color: var(--text-light);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+.blog-page a.back-button:hover {
+    background-color: var(--boca-blue);
+}
+
+
+/* ======================================= */
+/* ============== Contacto =============== */
+/* ======================================= */
+
+.blog-page .contact-container {
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.blog-page .form-wrapper {
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blog-page .form-wrapper h1 {
+    font-size: 2.2em;
+    color: var(--boca-blue);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.blog-page .form-wrapper p {
+    font-size: 1.1em;
+    color: #555;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.blog-page .form-wrapper form {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-page .form-wrapper label {
+    font-size: 1em;
+    color: var(--boca-blue);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.blog-page .form-wrapper input[type="text"],
+.blog-page .form-wrapper input[type="email"],
+.blog-page .form-wrapper textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid var(--bg-light-gray);
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.blog-page .form-wrapper input[type="text"]:focus,
+.blog-page .form-wrapper input[type="email"]:focus,
+.blog-page .form-wrapper textarea:focus {
+    border-color: var(--boca-blue);
+    outline: none;
+}
+
+.blog-page .form-wrapper .submit-button {
+    display: inline-block;
+    background-color: var(--boca-blue);
+    color: var(--text-light);
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.blog-page .form-wrapper .submit-button:hover {
+    background-color: var(--boca-dark-blue);
+}
+
+/* Ajuste responsive para la página de artículo */
+@media (max-width: 900px) {
+    .blog-page .article-container {
+        width: 100%;
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    
+    .blog-page .article-container img {
+        height: 250px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ================================================== */
+/* ==== ARREGLO RESPONSIVO PARA EL LINKTREE ==== */
+/* ================================================== */
+
+@media (max-width: 600px) {
+
+    body:not(.blog-page) {
+        height: auto;
+        min-height: 100vh; 
+        padding: 20px;
+        align-items: flex-start;
+    }
+
+    .linktree-container {
+        padding: 25px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ================================================== */
+/* ==== BLOQUE RESPONSIVO DE 600px (CORREGIDO) ==== */
+/* ================================================== */
+
+@media (max-width: 600px) {
+
+    .blog-page nav ul {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .blog-page nav img {
+        display: block;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Contenedor de enlaces */
+    .blog-page li.nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    /* Enlaces individuales (botón) */
+    .blog-page li.nav-links a {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    
+
+    .blog-page .feed {
+        padding: 20px;
+    }
+
+    .blog-page .feed article h1 {
+        font-size: 1.8em;
+    }
+
+    .blog-page .feed article img {
+        height: 200px;
+    }
+
+    .blog-page aside {
+        padding: 20px;
+    }
+
+    .blog-page .article-container {
+        padding: 20px;
+    }
+
+    .blog-page .article-container h1 {
+        font-size: 1.8em; 
+    }
+
+    .blog-page .article-container img {
+        height: 220px; 
+    }
+
+    .blog-page .article-body blockquote {
+        margin-left: 10px; 
+        padding: 15px;
+        font-size: 1.1em;
+    }
+
+    .blog-page .form-wrapper {
+        padding: 25px; 
+    }
+
+    .blog-page .form-wrapper h1 {
+        font-size: 1.8em;
+    }
+
+    .blog-page .form-wrapper p {
+        font-size: 1em;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==================================================== */
+/* ==== Estilos Grilla Página de Publicaciones ==== */
+/* ==================================================== */
+
+
+.blog-page .feed-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 25px; 
+}
+
+
+.blog-page .feed-grid article img {
+    height: 200px; 
+}
+
+
+.blog-page .feed-grid article h1 {
+    font-size: 1.6em;
+    line-height: 1.3;
+}
+
+
+.blog-page .feed-grid article p {
+    font-size: 0.95em;
+}
+
+@media (max-width: 600px) {
+    .blog-page .feed-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .blog-page .feed-grid article h1 {
+        font-size: 1.8em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ======================================= */
+/* ==== Estilos Footer con Mapa de Sitio ==== */
+/* ======================================= */
+
+/* Hacemos el footer un poco más grande */
+.blog-page footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.blog-page .footer-sitemap {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    /* Un separador sutil */
+    border-bottom: 1px solid rgba(255, 195, 0, 0.3); 
+}
+
+.blog-page .footer-sitemap h3 {
+    color: var(--boca-yellow);
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.blog-page .footer-sitemap ul {
+    display: flex;
+    flex-wrap: wrap; /* Para que se vea bien en celulares */
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px 25px; /* Espacio vertical y horizontal */
+}
+
+.blog-page .footer-sitemap ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.blog-page .footer-sitemap ul li a:hover {
+    color: var(--boca-yellow);
+}
+
+.blog-page .footer-copyright {
+    margin: 0;
+    font-size: 0.9em;
+}
